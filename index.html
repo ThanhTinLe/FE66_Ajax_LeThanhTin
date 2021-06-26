@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container p-0 border boder-dark">
+        <h3 class="bg-dark p-2 text-white text-center">Quản lý nhân viên</h3>
+        <form action="" method="GET" class="form-group pl-5 pr-5">
+            <div class="form-group">
+                <label class="p-0 m-0" for="">Mã nhân viên</label>
+                <input type="text" class="form-control mb-3" id="maNhanVien" />
+                <p class="text text-danger" id="error_required_maNhanVien"></p>
+                <p class="text text-danger" id="error_all_digi_maNhanVien"></p>
+                <p class="text text-danger" id="error_maxLenght_maNhanVien"></p>
+                <p class="text text-danger" id="error_ID"></p>
+            </div>
+            <div class="form-group">
+                <label class="p-0 m-0" for="">Tên nhân viên</label>
+                <input type="text" class="form-control mb-3" id="tenNhanVien" />
+                <p class="text text-danger" id="error_required_tenNhanVien"></p>
+                <p class="text text-danger" id="error_allLetter_tenNhanVien"></p>
+            </div>
+            <div class="form-group">
+                <label class="p-0 m-0" for="">Chức vụ</label>
+                <select class="form-control" name="chucVu" id="chucVu">
+                    <option value="1">Nhân viên</option>
+                    <option value="2">Quản lý</option>
+                    <option value="3">Giám đốc</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="p-0 m-0" for="">Lương cơ bản</label>
+                <input type="text" class="form-control mb-3" id="luongCoBan" />
+                <p class="text text-danger" id="error_required_luongCoBan"></p>
+                <p class="text text-danger" id="error_min_max_length_luongCoBan"></p>
+                <p class="text text-danger" id="error_all_digi_luongCoBan"></p>
+            </div>
+            <div class="form-group">
+                <label class="p-0 m-0" for="">số giờ làm trong tháng</label>
+                <input type="text" class="form-control mb-3" id="soGioLamTrongThang" />
+                <p class="text text-danger" id="error_required_soGioLamTrongThang"></p>
+                <p class="text text-danger" id="error_min_max_length_soGioLamTrongThang"></p>
+                <p class="text text-danger" id="error_all_digi_soGioLamTrongThang"></p>
+            </div>
+            <div class="btnAction text-right">
+                <button type="submit" name="btnXacNhan" class="btn btn-outline-success" id="btnXacNhan">Thêm Nhân Viên</button>
+            </div>
+        </form>
+    </div>
+    <div class="container pt-3 p-0">
+        <table class="table">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>Mã nhân viên</th>
+                    <th>Tên nhân viên</th>
+                    <th>Chức vụ</th>
+                    <th>Lương cơ bản</th>
+                    <th>Tổng lương</th>
+                    <th>Giờ Làm/tháng</th>
+                    <th>Xếp loại nhân viên</th>
+                    <th>xóa</th>
+                </tr>
+            </thead>
+            <tbody id="tblNhanVien">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="./js/NhanVien.js"></script>
+    <script src="./js/validate.js"></script>
+    <script src="./js/indexAjax.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
+</body>
+
+</html>
